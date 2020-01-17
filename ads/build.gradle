@@ -22,8 +22,12 @@ android {
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+        }
+
+        release {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -50,7 +54,7 @@ publishing {
             groupId group
             version version
             artifactId 'ads'
-            artifact "$buildDir/outputs/aar/android-ad-release.aar"
+            artifact "$buildDir/outputs/aar/ads-release.aar"
         }
     }
 }
@@ -87,7 +91,7 @@ bintray {
         repo = properties.getProperty("bintray.repoName")
         name = 'ads'
         licenses = ['Apache-2.0']
-        vcsUrl = 'https://github.com/dclickio/android-ad.git'
+        vcsUrl = 'https://github.com/dclickio/android-ads.git'
         websiteUrl = 'https://www.dclick.io'
         publicDownloadNumbers = true
         publish = true

@@ -19,3 +19,10 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#-keep class io.dclick.ad.unity.**
+-keep interface io.dclick.ad.unity.**
+
+-keep class io.dclick.ad.** {
+    public *;
+}

@@ -9,6 +9,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -24,10 +25,12 @@ import androidx.annotation.RequiresApi;
 
 public class AdView extends LinearLayout {
     private static int ADVIEW_COUNT = 0;
-    private static int ADVIEW_COUNT_LIMIT = 3;
+    private static int ADVIEW_COUNT_LIMIT = BuildConfig.DEBUG ? 100 : 3;
     private static final String TAG = "DclickAdView";
+    private static final String AD_URL = "https://api.dclick.io/v2/aai/";
     private WebView webView;
     private String adUnitId;
+    private AdSize adSize;
 
     public AdView(Context context) {
         super(context);
@@ -56,7 +59,17 @@ public class AdView extends LinearLayout {
         if (webView == null) {
             return;
         }
-        webView.loadUrl("https://api.dclick.io/v2/aai/" + adUnitId);
+
+        if (adSize != null) {
+            LayoutParams layoutParams = new LayoutParams(adSize.getWidth(), adSize.getHeight());
+            layoutParams.gravity = Gravity.CENTER_VERTICAL | Gravity.CENTER_HORIZONTAL;
+            webView.setLayoutParams(layoutParams);
+        }
+        webView.loadUrl(AD_URL + adUnitId);
+
+        if (BuildConfig.DEBUG) {
+            webView.setBackgroundColor(0xff000000 + 0xff0000);
+        }
     }
 
     @SuppressLint("SetJavaScriptEnabled")
@@ -141,14 +154,6 @@ public class AdView extends LinearLayout {
         super.onLayout(changed, leftTop, topLeft, leftTop + width, topLeft + height);
     }
 
-    public void setAdUnitId(String adUnitId) {
-        this.adUnitId = adUnitId;
-    }
-
-    public String getAdUnitId() {
-        return this.adUnitId;
-    }
-
     private void getAttrs(AttributeSet attrs) {
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.AdsAttrs);
         setTypeArray(typedArray);
@@ -164,6 +169,34 @@ public class AdView extends LinearLayout {
     private void setTypeArray(TypedArray typedArray) {
         adUnitId = typedArray.getString(R.styleable.AdsAttrs_adUnitId);
         typedArray.recycle();
+
+    }
+
+    public void setAdUnitId(String adUnitId) {
+        this.adUnitId = adUnitId;
+    }
+
+    public String getAdUnitId() {
+        return this.adUnitId;
+    }
+
+    public AdSize getAdSize() {
+        return adSize;
+    }
+
+    public void setAdSize(AdSize adSize) {
+        this.adSize = adSize;
+    }
+
+    public void pause() {
+        webView.loadUrl("about:blank");
+    }
+
+    public void resume() {
+        loadAd();
+    }
+
+    public void destroy() {
 
     }
 }
