@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
+
+    <io.dclick.ad.AdView
+        android:id="@+id/dclickAdView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        app:adUnitId="com.snumatch/1579018075737">
+
+    </io.dclick.ad.AdView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="광고 숨김" />
+
+        <io.dclick.ad.AdView
+            android:id="@+id/dclickAdView2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:background="@android:color/holo_red_dark"
+            app:adUnitId="com.snumatch/1579018075737">
+
+        </io.dclick.ad.AdView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <io.dclick.ad.AdView
+            android:id="@+id/dclickAdView3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_red_dark"
+            app:adUnitId="com.snumatch/1579018075737">
+
+        </io.dclick.ad.AdView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <io.dclick.ad.AdView
+            android:id="@+id/dclickAdView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_red_dark"
+            app:adUnitId="com.snumatch/1579018075737">
+
+        </io.dclick.ad.AdView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/cardview_dark_background"
+        android:orientation="vertical">
+
+        <io.dclick.ad.AdView
+            android:id="@+id/dclickAdView5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_red_dark"
+            app:adUnitId="com.snumatch/1579018075737">
+
+        </io.dclick.ad.AdView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/holo_purple"
+        android:orientation="vertical">
+
+        <io.dclick.ad.AdView
+            android:id="@+id/dclickAdView6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00FF0000"
+            app:adUnitId="com.snumatch/1579018075737">
+
+        </io.dclick.ad.AdView>
+    </LinearLayout>
+
+    <io.dclick.ad.AdView
+        android:id="@+id/dclickAdView7"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#00BCD4"
+        app:adUnitId="com.snumatch/1579018075737">
+
+    </io.dclick.ad.AdView>
+
+    <Button
+        android:id="@+id/banner_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Activity without finish" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Activity with finish" />
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/banner_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Banner Ad Test" />
+
+    <Button
+        android:id="@+id/interstitial_ad_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interstitial Ad Test" />
+
+    <Button
+        android:id="@+id/rewarded_ad_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rewarded Ad Test" />
+
+    <Button
+        android:id="@+id/native_ad_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Native Ad Test" />
+
+</LinearLayout>
