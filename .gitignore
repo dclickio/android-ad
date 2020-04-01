@@ -14,7 +14,7 @@
 .cxx
 .idea
 app/
-build.gradle
+build/
 gradle.properties
 gradle/
 gradlew
