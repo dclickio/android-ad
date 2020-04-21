@@ -16,7 +16,7 @@ DCLICK SDK 를 사용하여 DCLICK 광고 및 기타 다른 광고 플랫폼 ( �
 ```gradle
 dependencies {
   ...
-  implementation 'io.dclick:ads:0.0.3'
+  implementation 'io.dclick:ads:0.0.4'
 
   implementation 'com.google.android.gms:play-services-ads:18.3.0' // 애드몹을 사용 하는 경우만 추가
   implementation 'com.facebook.android:audience-network-sdk:5.7.1' // 페이스북을 사용 하는 경우만 추가
