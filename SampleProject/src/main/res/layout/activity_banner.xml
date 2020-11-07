@@ -22,8 +22,6 @@
 
     </LinearLayout>
 
-<<<<<<< HEAD
-=======
     <Button
         android:id="@+id/toggle1"
         android:layout_width="match_parent"
@@ -37,7 +35,6 @@
         android:layout_marginTop="50dp"
         android:text="FrameLayout Test" />
 
->>>>>>> 843e736... SampleProject update
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
