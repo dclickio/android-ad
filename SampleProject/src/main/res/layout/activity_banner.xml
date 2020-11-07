@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context=".sample.MainActivity">
 
+    <TextView
+        android:id="@+id/ad_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LinearLayout Test" />
+
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -16,6 +22,22 @@
 
     </LinearLayout>
 
+<<<<<<< HEAD
+=======
+    <Button
+        android:id="@+id/toggle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show or Hide Toggle" />
+
+    <TextView
+        android:id="@+id/ad_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="FrameLayout Test" />
+
+>>>>>>> 843e736... SampleProject update
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
