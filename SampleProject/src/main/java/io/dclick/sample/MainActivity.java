@@ -25,7 +25,13 @@ public class MainActivity extends Activity {
 //
 //        adConfig.setBannerUnitId(AdNetwork.Dclick, "DCLICK Banner Unit ID");
 //        adConfig.setBannerUnitId(AdNetwork.Google, "AdMob Banner Unit ID");
+//        
+//        adConfig.setInterstitialUnitId(AdNetwork.Dclick, "DCLICK Interstitial Unit ID");
+//        adConfig.setInterstitialUnitId(AdNetwork.Google, "AdMob Interstitial Unit ID");
 //
+//        adConfig.setRewardedAdUnitId(AdNetwork.Dclick, "DCLICK RewardedAd Unit ID");
+//        adConfig.setRewardedAdUnitId(AdNetwork.Google, "AdMob RewardedAd Unit ID");
+//        
 //        AdManager.initialize(this, adConfig);
 
         findViewById(R.id.banner_test).setOnClickListener(new View.OnClickListener() {
